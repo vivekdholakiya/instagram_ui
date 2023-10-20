@@ -41,37 +41,127 @@ class _SearchScreenState extends State<SearchScreen> {
                 ),
               ),
             ),
+
             Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 20),
-                  child: Container(
-                    height: 150,
-                    width: 200,
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      image: DecorationImage(
+                Container(
+                  width: 124,
+                  height: 134,
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurpleAccent,
+                    image: DecorationImage(
                         image: NetworkImage(
-                            'https://assets.materialup.com/uploads/12243569-4a60-40bc-8baa-0d8473a49add/preview.png'),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXWh72DgpiId3gg_1YgyEtH7VY_huEZ3kuQ&usqp=CAU'),
+                        fit: BoxFit.cover),
                   ),
                 ),
+                Spacer(),
                 Container(
-                  height: 150,
-                  width: 200,
+                  width: 124,
+                  height: 134,
                   decoration: BoxDecoration(
-                    color: Colors.black,
+                    color: Colors.deepPurpleAccent,
                     image: DecorationImage(
-                      image: NetworkImage(
-                          'https://assets.materialup.com/uploads/12243569-4a60-40bc-8baa-0d8473a49add/preview.png',),
-                      fit: BoxFit.fill,
-                    ),
+                        image: NetworkImage(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauyOX-4mccIzbcG4eNk4gN3nmufAyhcUDKQ&usqp=CAU'),
+                        fit: BoxFit.cover),
+                  ),
+                ),
+                Spacer(),
+                Container(
+                  width: 124,
+                  height: 134,
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurpleAccent,
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH09i5ccNv8ultPz0i4oA9vlKZ3VUdpbOJFA&usqp=CAU'),
+                        fit: BoxFit.cover),
                   ),
                 ),
               ],
             ),
+            SizedBox(height: 5,),
+            Row(
+              children: [
+                Container(
+                  width: 124,
+                  height: 134,
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurpleAccent,
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXWh72DgpiId3gg_1YgyEtH7VY_huEZ3kuQ&usqp=CAU'),
+                        fit: BoxFit.cover),
+                  ),
+                ),
+                Spacer(),
+                Container(
+                  width: 124,
+                  height: 134,
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurpleAccent,
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauyOX-4mccIzbcG4eNk4gN3nmufAyhcUDKQ&usqp=CAU'),
+                        fit: BoxFit.cover),
+                  ),
+                ),
+                Spacer(),
+                Container(
+                  width: 124,
+                  height: 134,
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurpleAccent,
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH09i5ccNv8ultPz0i4oA9vlKZ3VUdpbOJFA&usqp=CAU'),
+                        fit: BoxFit.cover),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 5,),
+            Row(
+              children: [
+                Container(
+                  width: 124,
+                  height: 134,
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurpleAccent,
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXWh72DgpiId3gg_1YgyEtH7VY_huEZ3kuQ&usqp=CAU'),
+                        fit: BoxFit.cover),
+                  ),
+                ),
+                Spacer(),
+                Container(
+                  width: 124,
+                  height: 134,
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurpleAccent,
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauyOX-4mccIzbcG4eNk4gN3nmufAyhcUDKQ&usqp=CAU'),
+                        fit: BoxFit.cover),
+                  ),
+                ),
+                Spacer(),
+                Container(
+                  width: 124,
+                  height: 134,
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurpleAccent,
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH09i5ccNv8ultPz0i4oA9vlKZ3VUdpbOJFA&usqp=CAU'),
+                        fit: BoxFit.cover),
+                  ),
+                ),
+              ],
+            ),
+
           ],
         ),
       ),
