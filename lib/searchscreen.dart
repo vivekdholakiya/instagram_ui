@@ -14,13 +14,11 @@ class _SearchScreenState extends State<SearchScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        // appBar: AppBar(
-        //   backgroundColor: Colors.red,
-        // ),
+
         body: Column(
           children: [
             SizedBox(
-              height: 20,
+              height: 50,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -37,8 +35,20 @@ class _SearchScreenState extends State<SearchScreen> {
                   prefixIcon: Icon(
                     Icons.search,
                     color: Colors.black,
+
                   ),
                 ),
+              ),
+            ),
+            CircleAvatar(
+              radius: 30,
+              backgroundColor: Colors.blue, //<-- SEE HERE
+              child: IconButton(
+                icon: Icon(
+                  Icons.flight,
+                  color: Colors.black,
+                ),
+                onPressed: () {},
               ),
             ),
 

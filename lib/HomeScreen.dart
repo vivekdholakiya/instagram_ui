@@ -14,6 +14,18 @@ class _HomeScreenState extends State<HomeScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 1,
+          title: Text(
+            "instagram",
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          ),
+          actions: [
+            Icon(Icons.send, color: Colors.black),
+
+          ],
+        ),
         // appBar: AppBar(
         //   backgroundColor: Colors.pink,
         // ),

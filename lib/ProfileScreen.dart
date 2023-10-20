@@ -14,13 +14,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        // appBar: AppBar(
-        //   backgroundColor: Colors.greenAccent,
-        // ),
+
         body: Column(
           children: [
             Row(
-              children: [],
+              children: [
+
+              ],
             ),
           ],
         ),

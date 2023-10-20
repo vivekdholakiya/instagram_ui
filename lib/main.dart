@@ -40,14 +40,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(appBarTheme: AppBarTheme(color: Colors.white)),
       home: Scaffold(
-        appBar: AppBar(
-          elevation: 1,
-          title: Text(
-            "instagram",
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-          ),
-          leading: Icon(Icons.send, color: Colors.black),
-        ),
+
         body: Center(
           child: nevigationlist.elementAt(currentindexnum),
         ),
