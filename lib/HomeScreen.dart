@@ -10,52 +10,65 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
+  void ontapaction() {
+
+  }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 1,
-          title: Text(
-            "instagram",
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-          ),
-          actions: [
-            Icon(Icons.send, color: Colors.black),
+            backgroundColor: Colors.white,
+            elevation: 1,
+            title: Text(
+              "instagram",
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            ),
+            actions: [
+              IconButton(
+                onPressed: () {
 
-          ],
-        ),
-        // appBar: AppBar(
-        //   backgroundColor: Colors.pink,
-        // ),
+                },
+
+                icon: Icon(
+                  Icons.near_me,
+                  color: Colors.black,
+                ),
+              ),
+            ]
+            // actions: [
+            //   Icon(Icons.send, color: Colors.black),
+            // ],
+            ),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              SizedBox(
-                height: 20,
-              ),
               // story and watch all.........................
-              Row(
-                children: [
-                  Text(
-                    "Stories",
-                    style: TextStyle(
-                      fontSize: 15,
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Row(
+                  children: [
+                    Text(
+                      "Stories",
+                      style: TextStyle(
+                        fontSize: 15,
+                      ),
                     ),
-                  ),
-                  Spacer(),
-                  Icon(Icons.play_circle),
-                  Text(
-                    "Watch all",
-                    style: TextStyle(fontSize: 15),
-                  ),
-                ],
+                    Spacer(),
+                    Icon(Icons.play_circle),
+                    Text(
+                      "Watch all",
+                      style: TextStyle(fontSize: 15),
+                    ),
+                  ],
+                ),
               ),
-              SizedBox(
-                height: 10,
-              ),
+              // SizedBox(
+              //   height: 10,
+              // ),
               //start story section.........................
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -64,26 +77,55 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(
                       width: 10,
                     ),
-                    Column(
+                    Stack(
                       children: [
-                        Container(
-                          height: 70,
-                          width: 70,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                              150,
+                        Column(
+                          children: [
+                            Container(
+                              height: 70,
+                              width: 72,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(
+                                  150,
+                                ),
+                                border: Border.all(width: 2, color: Colors.red),
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                      'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg'),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
                             ),
-                            border: Border.all(width: 2, color: Colors.red),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
+                            Text("Your Story"),
+                          ],
                         ),
-                        Text("Your Story"),
+                        Positioned(
+                          top: 40,
+                          left: 50,
+                          child: Icon(Icons.add_circle_outline),
+                        ),
                       ],
                     ),
+                    // Column(
+                    //   children: [
+                    //     Container(
+                    //       height: 70,
+                    //       width: 70,
+                    //       decoration: BoxDecoration(
+                    //         borderRadius: BorderRadius.circular(
+                    //           150,
+                    //         ),
+                    //         border: Border.all(width: 2, color: Colors.red),
+                    //         image: DecorationImage(
+                    //           image: NetworkImage(
+                    //               'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg'),
+                    //           fit: BoxFit.cover,
+                    //         ),
+                    //       ),
+                    //     ),
+                    //     Text("Your Story"),
+                    //   ],
+                    // ),
                     SizedBox(
                       width: 20,
                     ),

@@ -3,7 +3,7 @@ import 'package:instagram_ui/HomeScreen.dart';
 import 'package:instagram_ui/NewpostScreen.dart';
 import 'package:instagram_ui/searchscreen.dart';
 
-import 'FavoriteScreen.dart';
+import 'ReelScreen.dart';
 import 'ProfileScreen.dart';
 
 void main() {
@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
     HomeScreen(),
     SearchScreen(),
     NewpostScreen(),
-    FavoriteScreen(),
+    ReelScreen(),
     ProfileScreen(),
   ];
 
@@ -64,7 +64,7 @@ class _MyAppState extends State<MyApp> {
               label: "",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_border, color: Colors.black, size: 30),
+              icon: Icon(Icons.group_work , color: Colors.black, size: 30),
               label: "",
             ),
             BottomNavigationBarItem(
