@@ -9,656 +9,159 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List UserData = [
+    // 'https://ibb.co/9Hj7QBP', //vivek
+    //'https://ibb.co/9WFb6qz', //yash
+    {
+      "photo":
+          'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+      "name": "keval_d"
+    },
+    {
+      "photo": 'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX',
+      "name": "__yag._"
+    },
+    {
+      "photo":
+          'https://www.shutterstock.com/image-vector/dotted-spiral-vortex-royaltyfree-images-600w-2227567913.jpg',
+      "name": "dix.it"
+    },
+    {
+      "photo":
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU',
+      "name": "pratik__0080"
+    },
+    {
+      "photo":
+          'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+      "name": "hey_2x"
+    },
+    {
+      "photo":
+          'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+      "name": "_099hi"
+    },
+    {
+      "photo":
+          'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+      "name": "it_._."
+    },
+    {
+      "photo":
+          'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+      "name": "radhe__070"
+    },
+    {
+      "photo":
+          'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+      "name": "thed_"
+    },
+    {
+      "photo":
+          'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+      "name": "nature010"
+    },
+  ];
+
   @override
-  void ontapaction() {
-
-  }
-
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.white,
-            elevation: 1,
-            title: Text(
-              "instagram",
-              style:
-                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-            ),
-            actions: [
-              IconButton(
-                onPressed: () {
-
-                },
-
-                icon: Icon(
-                  Icons.near_me,
-                  color: Colors.black,
-                ),
+          backgroundColor: Colors.white,
+          elevation: 1,
+          title: Text(
+            "instagram",
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          ),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.near_me,
+                color: Colors.black,
               ),
-            ]
-            // actions: [
-            //   Icon(Icons.send, color: Colors.black),
-            // ],
             ),
+          ],
+        ),
         body: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
+          scrollDirection: Axis.horizontal,
+          child: Row(
             children: [
-              // story and watch all.........................
               Padding(
-                padding: const EdgeInsets.all(8),
-                child: Row(
+                padding: const EdgeInsets.only(left: 16),
+                child: Stack(
+                  alignment: Alignment.bottomRight,
                   children: [
-                    Text(
-                      "Stories",
-                      style: TextStyle(
-                        fontSize: 15,
+                    Container(
+                      height: 70,
+                      width: 70,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(70),
+                        color: Colors.blueGrey,
+                        border: Border.all(
+                          color: Colors.redAccent,
+                        ),
                       ),
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(70),
+                          child: Image.network(
+                            "https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340",
+                            fit: BoxFit.cover,
+                          )),
                     ),
-                    Spacer(),
-                    Icon(Icons.play_circle),
-                    Text(
-                      "Watch all",
-                      style: TextStyle(fontSize: 15),
-                    ),
-                  ],
-                ),
-              ),
-              // SizedBox(
-              //   height: 10,
-              // ),
-              //start story section.........................
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Stack(
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 72,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(
-                                  150,
-                                ),
-                                border: Border.all(width: 2, color: Colors.red),
-                                image: DecorationImage(
-                                  image: NetworkImage(
-                                      'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg'),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Text("Your Story"),
-                          ],
-                        ),
-                        Positioned(
-                          top: 40,
-                          left: 50,
-                          child: Icon(Icons.add_circle_outline),
-                        ),
-                      ],
-                    ),
-                    // Column(
-                    //   children: [
-                    //     Container(
-                    //       height: 70,
-                    //       width: 70,
-                    //       decoration: BoxDecoration(
-                    //         borderRadius: BorderRadius.circular(
-                    //           150,
-                    //         ),
-                    //         border: Border.all(width: 2, color: Colors.red),
-                    //         image: DecorationImage(
-                    //           image: NetworkImage(
-                    //               'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg'),
-                    //           fit: BoxFit.cover,
-                    //         ),
-                    //       ),
-                    //     ),
-                    //     Text("Your Story"),
-                    //   ],
-                    // ),
-                    SizedBox(
+                    Container(
+                      height: 20,
                       width: 20,
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height: 70,
-                          width: 70,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                              150,
-                            ),
-                            border: Border.all(width: 2, color: Colors.red),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        Text("___itsme."),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height: 70,
-                          width: 70,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                              150,
-                            ),
-                            border: Border.all(width: 2, color: Colors.red),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://www.shutterstock.com/image-vector/dotted-spiral-vortex-royaltyfree-images-600w-2227567913.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        Text("..hi_dark_."),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height: 70,
-                          width: 70,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                              150,
-                            ),
-                            border: Border.all(width: 2, color: Colors.red),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRCIq1WFIqckI69eGZ67ugLdfxchy96eLR7w&usqp=CAU'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        Text("devil__."),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height: 70,
-                          width: 70,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                              150,
-                            ),
-                            border: Border.all(width: 2, color: Colors.red),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        Text("mr_.d."),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height: 70,
-                          width: 70,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                              150,
-                            ),
-                            border: Border.all(width: 2, color: Colors.red),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        Text("it'sabc._"),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height: 70,
-                          width: 70,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                              150,
-                            ),
-                            border: Border.all(width: 2, color: Colors.red),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHZyOpzMZDaV-Cs1E-hjOJ-Dr2m4UIqc6j7w&usqp=CAU'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        Text("kalakriti__"),
-                      ],
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.blue),
+                      child: Icon(Icons.add, color: Colors.white, size: 20),
                     ),
                   ],
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 10),
-                height: 10,
-                width: 500,
-                color: Colors.black12,
-              ),
-              //main post view in application...................
-              Column(
-                children: [
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Container(
-                        width: 40.0,
-                        height: 40.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg'),
-                              fit: BoxFit.cover),
-                          border: Border.all(
-                            color: Colors.deepPurpleAccent,
-                          ),
-                        ),
-                      ),
-                      Text(
-                        "  _.v.__.d._",
-                        style: TextStyle(
-                          fontSize: 18.0,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 220.0,
-                      ),
-                      Icon(
-                        Icons.more_horiz,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(top: 5.0, left: 10),
-                        width: 360,
-                        height: 270,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('assets/tree.jpg'),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 4.0,
-                  ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 5.0,
-                      ),
-                      Icon(
-                        Icons.favorite_border,
-                        size: 30.0,
-                      ),
-                      SizedBox(
-                        width: 12.0,
-                      ),
-                      Icon(
-                        Icons.mode_comment_outlined,
-                        size: 27.0,
-                      ),
-                      SizedBox(
-                        width: 15.0,
-                      ),
-                      Icon(
-                        Icons.send_outlined,
-                        size: 29.0,
-                      ),
-                      SizedBox(
-                        width: 220,
-                      ),
-                      Icon(
-                        Icons.bookmark_add_outlined,
-                        size: 29.0,
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 8.0,
-                  ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 8.0,
-                      ),
-                      Icon(
-                        Icons.circle_outlined,
-                        size: 20,
-                      ),
-                      Icon(
-                        Icons.circle_outlined,
-                        size: 20,
-                      ),
-                      Icon(
-                        Icons.circle_outlined,
-                        size: 20,
-                      ),
-                      Text(" Liked by "),
-                      Text(
-                        "__itsme.",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 15.0),
-                      ),
-                      Text(" and "),
-                      Text(
-                        "500 Others",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16.0),
-                      ),
-                    ],
-                  ),
-                  //2nd post start here.............
-                  Column(
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 360.0,
-                            height: 2.0,
-                            color: Color(0XFFFFF5EE),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            width: 40.0,
-                            height: 40.0,
+                height: 100,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: UserData.length,
+                  physics: ScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 8),
+                          child: Container(
+                            width: 70,
+                            height: 70,
                             decoration: BoxDecoration(
-                              color: Color(0xFF9CCDE5),
-                              borderRadius: BorderRadius.circular(20),
-                              image: DecorationImage(
-                                  image: NetworkImage(
-                                      'https://images.unsplash.com/photo-1575936123452-b67c3203c357?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D'),
-                                  fit: BoxFit.cover),
+                              color: Colors.blueGrey,
+                              borderRadius: BorderRadius.circular(70),
                               border: Border.all(
-                                color: Colors.deepPurpleAccent,
+                                color: Colors.redAccent,
+                              ),
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(70),
+                              child: Image.network(
+                                "${UserData[index]["photo"]}",
+                                fit: BoxFit.cover,
                               ),
                             ),
                           ),
-                          Text(
-                            "  heyy__.",
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 220.0,
-                          ),
-                          Icon(
-                            Icons.more_horiz,
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(top: 5.0, left: 10),
-                            width: 360,
-                            height: 270,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                    'https://assets.materialup.com/uploads/12243569-4a60-40bc-8baa-0d8473a49add/preview.png'),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 4.0,
-                      ),
-                      Row(
-                        children: [
-                          SizedBox(
-                            width: 5.0,
-                          ),
-                          Icon(
-                            Icons.favorite_border,
-                            size: 30.0,
-                          ),
-                          SizedBox(
-                            width: 12.0,
-                          ),
-                          Icon(
-                            Icons.mode_comment_outlined,
-                            size: 27.0,
-                          ),
-                          SizedBox(
-                            width: 15.0,
-                          ),
-                          Icon(
-                            Icons.send_outlined,
-                            size: 29.0,
-                          ),
-                          SizedBox(
-                            width: 220,
-                          ),
-                          Icon(
-                            Icons.bookmark_add_outlined,
-                            size: 29.0,
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Icon(
-                            Icons.circle_outlined,
-                            size: 20,
-                          ),
-                          Icon(
-                            Icons.circle_outlined,
-                            size: 20,
-                          ),
-                          Icon(
-                            Icons.circle_outlined,
-                            size: 20,
-                          ),
-                          Text(" Liked by "),
-                          Text(
-                            "__itsme__dark_.",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 15),
-                          ),
-                          Text(" and "),
-                          Text(
-                            "254 Others",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 16),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  //3rd post here..................
-                  Column(
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 360.0,
-                            height: 2.0,
-                            color: Color(0XFFFFF5EE),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            width: 40.0,
-                            height: 40.0,
-                            decoration: BoxDecoration(
-                              color: Color(0xFF9CCDE5),
-                              borderRadius: BorderRadius.circular(20),
-                              image: DecorationImage(
-                                  image: NetworkImage(
-                                      'https://images.unsplash.com/photo-1575936123452-b67c3203c357?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D'),
-                                  fit: BoxFit.cover),
-                              border: Border.all(
-                                color: Colors.deepPurpleAccent,
-                              ),
-                            ),
-                          ),
-                          Text(
-                            "  heyy__.",
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 220.0,
-                          ),
-                          Icon(
-                            Icons.more_horiz,
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(top: 5.0, left: 10),
-                            width: 360,
-                            height: 270,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                    'https://assets.materialup.com/uploads/12243569-4a60-40bc-8baa-0d8473a49add/preview.png'),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 4.0,
-                      ),
-                      Row(
-                        children: [
-                          SizedBox(
-                            width: 5.0,
-                          ),
-                          Icon(
-                            Icons.favorite_border,
-                            size: 30.0,
-                          ),
-                          SizedBox(
-                            width: 12.0,
-                          ),
-                          Icon(
-                            Icons.mode_comment_outlined,
-                            size: 27.0,
-                          ),
-                          SizedBox(
-                            width: 15.0,
-                          ),
-                          Icon(
-                            Icons.send_outlined,
-                            size: 29.0,
-                          ),
-                          SizedBox(
-                            width: 220,
-                          ),
-                          Icon(
-                            Icons.bookmark_add_outlined,
-                            size: 29.0,
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Icon(
-                            Icons.circle_outlined,
-                            size: 20,
-                          ),
-                          Icon(
-                            Icons.circle_outlined,
-                            size: 20,
-                          ),
-                          Icon(
-                            Icons.circle_outlined,
-                            size: 20,
-                          ),
-                          Text(" Liked by "),
-                          Text(
-                            "__itsme__dark_.",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 15),
-                          ),
-                          Text(" and "),
-                          Text(
-                            "254 Others",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 16),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+                        ),
+                        Text("${UserData[index]["name"]}"),
+                      ],
+                    );
+                  },
+                ),
               ),
+              // ListView.builder(
+              //   itemCount: UserData.length, itemBuilder: (BuildContext context, int index) {  },
+              // ),
             ],
           ),
         ),

@@ -94,7 +94,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 SizedBox(
                   width: 50,
                 ),
-
                 Column(
                   children: [
                     Text(
@@ -269,7 +268,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Stack(
                   children: [
                     Container(
-                      width: 45,
+                      width: 40,
                       height: 28,
                       decoration: BoxDecoration(
                         color: Color(0XFFD3D3D3),
@@ -307,7 +306,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: Row(
                 children: [
                   SizedBox(
-                    width: 10.0,
+                    width: 10,
                   ),
                   Container(
                     height: 60,
@@ -321,7 +320,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           fit: BoxFit.cover),
                     ),
                   ),
-                  SizedBox(width: 15.0),
+                  SizedBox(width: 15),
                   Container(
                     height: 60,
                     width: 60,
@@ -334,7 +333,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           fit: BoxFit.cover),
                     ),
                   ),
-                  SizedBox(width: 15.0),
+                  SizedBox(width: 15),
                   Container(
                     height: 60,
                     width: 60,
@@ -347,7 +346,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           fit: BoxFit.cover),
                     ),
                   ),
-                  SizedBox(width: 15.0),
+                  SizedBox(width: 15),
                   Container(
                     height: 60,
                     width: 60,
@@ -360,7 +359,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           fit: BoxFit.cover),
                     ),
                   ),
-                  SizedBox(width: 15.0),
+                  SizedBox(width: 15),
                   Container(
                     height: 60,
                     width: 60,
@@ -373,7 +372,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           fit: BoxFit.cover),
                     ),
                   ),
-                  SizedBox(width: 15.0),
+                  SizedBox(width: 15),
                   Container(
                     height: 60,
                     width: 60,
@@ -386,7 +385,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           fit: BoxFit.cover),
                     ),
                   ),
-                  SizedBox(width: 15.0),
+                  SizedBox(width: 15),
                   Container(
                     height: 60,
                     width: 60,
@@ -426,7 +425,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               children: [
                 Container(
                   width: 205,
-                  height: 1.0,
+                  height: 1,
                   color: Colors.black,
                 ),
               ],
@@ -442,8 +441,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     Spacer(),
                     Container(
-                      height: 130,
-                      width: 130,
+                      height: 110,
+                      width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage(
@@ -453,8 +452,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     Spacer(),
                     Container(
-                      height: 130,
-                      width: 130,
+                      height: 110,
+                      width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage(
@@ -464,8 +463,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     Spacer(),
                     Container(
-                      height: 130,
-                      width: 130,
+                      height: 110,
+                      width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage(
@@ -483,8 +482,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     Spacer(),
                     Container(
-                      height: 130,
-                      width: 130,
+                      height: 110,
+                      width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage(
@@ -494,8 +493,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     Spacer(),
                     Container(
-                      height: 130,
-                      width: 130,
+                      height: 110,
+                      width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage(
@@ -505,8 +504,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     Spacer(),
                     Container(
-                      height: 130,
-                      width: 130,
+                      height: 110,
+                      width: 110,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                             image: NetworkImage(

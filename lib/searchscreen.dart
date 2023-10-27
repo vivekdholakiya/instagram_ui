@@ -9,221 +9,57 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
+  List UserData = [
+    'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+    'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX',
+    'https://www.shutterstock.com/image-vector/dotted-spiral-vortex-royaltyfree-images-600w-2227567913.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU',
+    'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+    'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+    'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX',
+    'https://www.shutterstock.com/image-vector/dotted-spiral-vortex-royaltyfree-images-600w-2227567913.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU',
+    'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+    'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+    'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX',
+    'https://www.shutterstock.com/image-vector/dotted-spiral-vortex-royaltyfree-images-600w-2227567913.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU',
+    'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+    'https://www.shutterstock.com/image-vector/dotted-spiral-vortex-royaltyfree-images-600w-2227567913.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU',
+    'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+    'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+    'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX',
+    'https://www.shutterstock.com/image-vector/dotted-spiral-vortex-royaltyfree-images-600w-2227567913.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU',
+    'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-
-        body: Column(
-          children: [
-            SizedBox(
-              height: 50,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  focusedBorder: OutlineInputBorder(),
-                  label: Text(
-                    "search",
-                    style: TextStyle(
-                      color: Colors.black,
-                    ),
-                  ),
-                  prefixIcon: Icon(
-                    Icons.search,
-                    color: Colors.black,
-
-                  ),
+        body: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            // mainAxisSpacing: 10,
+            // crossAxisSpacing: 10,
+            childAspectRatio: 1.0,
+          ),
+          itemCount: UserData.length,
+          itemBuilder: (context, index) {
+            return Container(
+              margin: EdgeInsets.only(left: 8,right: 8,top: 16),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(
+                      '${UserData[index]}'),
+                  fit: BoxFit.cover
                 ),
               ),
-            ),
-            // CircleAvatar(
-            //   radius: 30,
-            //   backgroundColor: Colors.blue, //<-- SEE HERE
-            //   child: IconButton(
-            //     icon: Icon(
-            //       Icons.flight,
-            //       color: Colors.black,
-            //     ),
-            //     onPressed: () {},
-            //   ),
-            // ),
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(children: [
-                  Row(
-                    children: [
-                      Container(
-                        width: 124,
-                        height: 134,
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurpleAccent,
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXWh72DgpiId3gg_1YgyEtH7VY_huEZ3kuQ&usqp=CAU'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                      Spacer(),
-                      Container(
-                        width: 124,
-                        height: 134,
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurpleAccent,
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauyOX-4mccIzbcG4eNk4gN3nmufAyhcUDKQ&usqp=CAU'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                      Spacer(),
-                      Container(
-                        width: 124,
-                        height: 134,
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurpleAccent,
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH09i5ccNv8ultPz0i4oA9vlKZ3VUdpbOJFA&usqp=CAU'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        width: 124,
-                        height: 134,
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurpleAccent,
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXWh72DgpiId3gg_1YgyEtH7VY_huEZ3kuQ&usqp=CAU'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                      Spacer(),
-                      Container(
-                        width: 124,
-                        height: 134,
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurpleAccent,
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauyOX-4mccIzbcG4eNk4gN3nmufAyhcUDKQ&usqp=CAU'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                      Spacer(),
-                      Container(
-                        width: 124,
-                        height: 134,
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurpleAccent,
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH09i5ccNv8ultPz0i4oA9vlKZ3VUdpbOJFA&usqp=CAU'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        width: 124,
-                        height: 134,
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurpleAccent,
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXWh72DgpiId3gg_1YgyEtH7VY_huEZ3kuQ&usqp=CAU'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                      Spacer(),
-                      Container(
-                        width: 124,
-                        height: 134,
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurpleAccent,
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauyOX-4mccIzbcG4eNk4gN3nmufAyhcUDKQ&usqp=CAU'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                      Spacer(),
-                      Container(
-                        width: 124,
-                        height: 134,
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurpleAccent,
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH09i5ccNv8ultPz0i4oA9vlKZ3VUdpbOJFA&usqp=CAU'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-
-                  Row(
-                    children: [
-                      Container(
-                        width: 124,
-                        height: 134,
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurpleAccent,
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXWh72DgpiId3gg_1YgyEtH7VY_huEZ3kuQ&usqp=CAU'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                      Spacer(),
-                      Container(
-                        width: 124,
-                        height: 134,
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurpleAccent,
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauyOX-4mccIzbcG4eNk4gN3nmufAyhcUDKQ&usqp=CAU'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                      Spacer(),
-                      Container(
-                        width: 124,
-                        height: 134,
-                        decoration: BoxDecoration(
-                          color: Colors.deepPurpleAccent,
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH09i5ccNv8ultPz0i4oA9vlKZ3VUdpbOJFA&usqp=CAU'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
+            );
+          },
         ),
       ),
     );
