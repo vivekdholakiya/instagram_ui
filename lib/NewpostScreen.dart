@@ -7,6 +7,31 @@ class NewpostScreen extends StatefulWidget {
   @override
   State<NewpostScreen> createState() => _NewpostScreenState();
 }
+List UserData = [
+  'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+  'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX',
+  'https://www.shutterstock.com/image-vector/dotted-spiral-vortex-royaltyfree-images-600w-2227567913.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU',
+  'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+  'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+  'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+  'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+  'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX',
+  'https://www.shutterstock.com/image-vector/dotted-spiral-vortex-royaltyfree-images-600w-2227567913.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU',  'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+  'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX',
+  'https://www.shutterstock.com/image-vector/dotted-spiral-vortex-royaltyfree-images-600w-2227567913.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU',
+  'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+  'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+  'https://media.macphun.com/img/uploads/customer/how-to/608/15542038745ca344e267fb80.28757312.jpg?q=85&w=1340',
+  'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+  'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+  'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX',
+  'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX',
+  'https://www.shutterstock.com/image-vector/dotted-spiral-vortex-royaltyfree-images-600w-2227567913.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU',
+];
 
 class _NewpostScreenState extends State<NewpostScreen> {
   @override
@@ -99,77 +124,31 @@ class _NewpostScreenState extends State<NewpostScreen> {
 
             SizedBox(height: 8.0,),
 
-
-            Row(
-              children: [
-                Container(
-                  width: 124,
-                  height: 134,
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurpleAccent,
-                    image: DecorationImage(image: NetworkImage('https://wallpapers.com/images/hd/anime-group-2tadt2rwrmj12sa1.jpg'),
-                        fit: BoxFit.cover),
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Container(
+                height: 350,
+                child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    // mainAxisSpacing: 10,
+                    // crossAxisSpacing: 10,
+                    childAspectRatio: 1.0,
                   ),
+                  itemCount: UserData.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin: EdgeInsets.only(left: 8, right: 8, top: 16),
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: NetworkImage('${UserData[index]}'),
+                            fit: BoxFit.cover),
+                      ),
+                    );
+                  },
                 ),
-                Spacer(),
-                Container(
-                  width: 124,
-                  height: 134,
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurpleAccent,
-                    image: DecorationImage(image: NetworkImage('https://img.freepik.com/premium-photo/water-drop-soft-color-abstract-wallpaper_756748-513.jpg'),
-                        fit: BoxFit.cover),
-                  ),
-                ),
-                Spacer(),
-                Container(
-                  width: 124,
-                  height: 134,
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurpleAccent,
-                    image: DecorationImage(image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg4tKFJdnuHSOOs6t9bf-EqHvIxfkBuG6gtg&usqp=CAU'),
-                        fit: BoxFit.cover),
-                  ),
-                ),
-              ],
+              ),
             ),
-
-            SizedBox(height: 4.0,),
-
-            Row(
-              children: [
-                Container(
-                  width: 124,
-                  height: 134,
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurpleAccent,
-                    image: DecorationImage(image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXWh72DgpiId3gg_1YgyEtH7VY_huEZ3kuQ&usqp=CAU'),
-                        fit: BoxFit.cover),
-                  ),
-                ),
-                Spacer(),
-                Container(
-                  width: 124,
-                  height: 134,
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurpleAccent,
-                    image: DecorationImage(image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauyOX-4mccIzbcG4eNk4gN3nmufAyhcUDKQ&usqp=CAU'),
-                        fit: BoxFit.cover),
-                  ),
-                ),
-                Spacer(),
-                Container(
-                  width: 124,
-                  height: 134,
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurpleAccent,
-                    image: DecorationImage(image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH09i5ccNv8ultPz0i4oA9vlKZ3VUdpbOJFA&usqp=CAU'),
-                        fit: BoxFit.cover),
-                  ),
-                ),
-              ],
-            ),
-
           ],
         ),
       ),

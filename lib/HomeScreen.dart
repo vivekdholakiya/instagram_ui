@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'messagescreen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -12,6 +14,11 @@ class _HomeScreenState extends State<HomeScreen> {
   List UserData = [
     // 'https://ibb.co/9Hj7QBP', //vivek
     //'https://ibb.co/9WFb6qz', //yash
+    {
+      "photo":
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU',
+      "name": "_.v.__.d._"
+    },
     {
       "photo":
           'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
@@ -76,12 +83,11 @@ class _HomeScreenState extends State<HomeScreen> {
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
           actions: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.near_me,
-                color: Colors.black,
-              ),
+            InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MessageScreen(),));
+              },
+              child: Icon(Icons.send),
             ),
           ],
         ),
@@ -159,9 +165,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 ),
               ),
-              // ListView.builder(
-              //   itemCount: UserData.length, itemBuilder: (BuildContext context, int index) {  },
-              // ),
             ],
           ),
         ),

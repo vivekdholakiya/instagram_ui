@@ -40,26 +40,46 @@ class _SearchScreenState extends State<SearchScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            // mainAxisSpacing: 10,
-            // crossAxisSpacing: 10,
-            childAspectRatio: 1.0,
-          ),
-          itemCount: UserData.length,
-          itemBuilder: (context, index) {
-            return Container(
-              margin: EdgeInsets.only(left: 8,right: 8,top: 16),
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                      '${UserData[index]}'),
-                  fit: BoxFit.cover
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0,
+        ),
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              TextField(
+                decoration: InputDecoration(
+                  prefixIcon: Icon(CupertinoIcons.search_circle),
                 ),
               ),
-            );
-          },
+              SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Container(
+                  height: 5000,
+                  child: GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      // mainAxisSpacing: 10,
+                      // crossAxisSpacing: 10,
+                      childAspectRatio: 1.0,
+                    ),
+                    itemCount: UserData.length,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: EdgeInsets.only(left: 8, right: 8, top: 16),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: NetworkImage('${UserData[index]}'),
+                              fit: BoxFit.cover),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
